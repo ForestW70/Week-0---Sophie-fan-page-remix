@@ -3,38 +3,34 @@ import Image from 'next/image'
 import { officialDiscography } from '../src/sophieObject';
 
 const DisplayOneItem = ({ album }) => {
-    const [albumView, changeAlbumView] = useState({officialDiscography})
+    const [albumView, changeAlbumView] = useState([officialDiscography])
 
-
-    const alb = officialDiscography.album
-    console.log(albumView)
+    const currAlbum = albumView[0][3]
+    console.log(currAlbum)
 
     return (
         <article>
-            <h2>{album}</h2>
-            <h6>Transgressive Records, Future Classic</h6>
+            <p>{currAlbum.year}</p>
+            <h2>{currAlbum.title}</h2>
+            <h6>{currAlbum.labels}</h6>
             <Image 
-                width="600" 
-                height="442"
-                src="/ooepura-art.jpg"
-                alt="oil"
+                width={currAlbum.imgXY[0]}
+                height={currAlbum.imgXY[1]}
+                src={currAlbum.img}
+                alt={currAlbum.alt + " Album art"}
             />
             
-            <ol>
-                <li><a href="" target="_blank">1</a></li>
-                <li><a href="" target="_blank">1</a></li>
-                <li><a href="" target="_blank">1</a></li>
-                <li><a href="" target="_blank">1</a></li>
-                <li><a href="" target="_blank">1</a></li>
-                <li><a href="" target="_blank">1</a></li>
-                <li><a href="" target="_blank">1</a></li>
-                <li><a href="" target="_blank">1</a></li>
-                <li><a href="" target="_blank">1</a></li>
-                <li><a href="" target="_blank">1</a></li>
-                <li><a href="" target="_blank">1</a></li>
-                <li><a href="" target="_blank">1</a></li>
-                <li><a href="" target="_blank">1</a></li>
-            </ol>
+            <ul>
+                {currAlbum.trackList.map(song => (
+                    <li>
+                        <span>{song.songNum}</span>
+                        <a href={song.link}>
+                            {song.songName}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+
 
         </article>
     )

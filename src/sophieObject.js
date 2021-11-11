@@ -1,6 +1,5 @@
-export const officialDiscography = {
-
-ooepura: {
+export const officialDiscography = [
+    {
         title: "Oil Of Every Pearl’s Un-Insides Remix Album",
         alt: "ooepura",
         img: "/ooepura-art.jpg",
@@ -136,6 +135,140 @@ ooepura: {
             
         ]
 
+    },
+    {
+        title: "Oil Of Every Pearl’s Un-Insides",
+        alt: "ooepu",
+        img: "/ooepu-art.jpg",
+        imgXY: [400, 400],
+        year: "2018",
+        labels: "Transgressive Records, Future Classic",
+        trackList: [
+            {
+                songNum: "A1",
+                songName: "It's Okay To Cry",
+                link: ""
+            },
+            {
+                songNum: "A2",
+                songName: "Ponyboy",
+                link: ""
+            },
+            {
+                songNum: "A3",
+                songName: "Faceshopping",
+                link: ""
+            },
+            {
+                songNum: "A4",
+                songName: "Is It Cold In The Water?",
+                link: ""
+            },
+            {
+                songNum: "A5",
+                songName: "Infatuation",
+                link: ""
+            },
+            {
+                songNum: "B1",
+                songName: "Not Okay",
+                link: ""
+            },
+            {
+                songNum: "B2",
+                songName: "Pretending",
+                link: ""
+            },
+            {
+                songNum: "B3",
+                songName: "Immaterial",
+                link: ""
+            },
+            {
+                songNum: "B4",
+                songName: "Whole New World/Pretend World",
+                link: ""
+            },
+
+            
+        ]
+
+    },
+    {
+        title: "Bipp (Autechre Mx) / Unisil",
+        alt: "unisil",
+        img: "/unisil-art.jpg",
+        imgXY: [400, 400],
+        year: "2021",
+        labels: "Numbers.",
+        trackList: [
+            {
+                songNum: "A",
+                songName: "Bipp (Autechre Mx)",
+                link: ""
+            },
+            {
+                songNum: "AA",
+                songName: "Unisil",
+                link: ""
+            },
+        ]
+    },
+    {
+        title: "Product",
+        alt: "product",
+        img: "/product-art.jpg",
+        imgXY: [400, 400],
+        year: "2021",
+        labels: "Numbers.",
+        trackList: [
+            {
+                songNum: "1",
+                songName: "Bipp",
+                link: ""
+            },
+            {
+                songNum: "2",
+                songName: "Elle",
+                link: ""
+            },
+            {
+                songNum: "3",
+                songName: "Lemonade",
+                link: ""
+            },
+            {
+                songNum: "4",
+                songName: "Hard",
+                link: ""
+            },
+            {
+                songNum: "5",
+                songName: "Msmsmsm",
+                link: ""
+            },
+            {
+                songNum: "6",
+                songName: "Vyzee",
+                link: ""
+            },
+            {
+                songNum: "7",
+                songName: "L.O.V.E",
+                link: ""
+            },
+            {
+                songNum: "8",
+                songName: "Just Like We Never Said Goodbye",
+                link: ""
+            },
+            {
+                songNum: "9",
+                songName: "Get Higher (Japan Bonus Track)",
+                link: ""
+            },
+
+        ]
     }
 
-}
+]
