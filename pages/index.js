@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import Head from 'next/head';
 import DisplayOneItem from '../src/DiscoSingle';
 
 export default function Home() {
+  const [currentAlbum, changeCurrentAlbum] = useState();
+
   return (
     <div>
       <Head>
@@ -28,7 +31,20 @@ export default function Home() {
           </em>
         </p>
       </main>
-      <DisplayOneItem album="oil" />
+
+      <div>
+        <label>view album: </label>
+        <select name="albums" onChange={e => changeCurrentAlbum(e.currentTarget.value)}>
+          <option value="unisil" selected>Bipp (Autechre Mx) / Unisil</option>
+          <option value="ooepura">Oil Of Every Pearl’s Un-Insides Remix Album</option>
+          <option value="ooepu">Oil Of Every Pearl’s Un-Insides</option>
+          <option value="product">Product</option>
+          <option value="nmts">Nothing More To Say</option>
+        </select>
+      </div>
+
+      <DisplayOneItem album={currentAlbum} />
+
     </div>
   )
 }

@@ -3,14 +3,19 @@ import Image from 'next/image'
 import { officialDiscography } from '../src/sophieObject';
 
 const DisplayOneItem = ({ album }) => {
-    const [albumView, changeAlbumView] = useState([officialDiscography])
+    const [albumView, changeAlbumView] = useState([])
 
-    const currAlbum = albumView[0][3]
-    console.log(currAlbum)
+    useEffect(() => {
+        const curr = officialDiscography.find(albums => albums.alt === album)
+        changeAlbumView(curr)
+    },[])
+
+    // const currAlbum = albumView[0]
+    console.log(albumView)
 
     return (
         <article>
-            <p>{currAlbum.year}</p>
+            {/* <p>{currAlbum.year}</p>
             <h2>{currAlbum.title}</h2>
             <h6>{currAlbum.labels}</h6>
             <Image 
@@ -29,7 +34,7 @@ const DisplayOneItem = ({ album }) => {
                         </a>
                     </li>
                 ))}
-            </ul>
+            </ul> */}
 
 
         </article>
